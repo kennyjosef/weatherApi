@@ -7,7 +7,8 @@ const describe = document.getElementById('describe')
 const icony = document.getElementById('icony')
 const temp = document.getElementById('temp')
 const date = new Date()
-const deg=`˚ C`
+const deg=`%`
+// const deg=`˚ C`
 let APIkey = '5d8a5939fd809096282dabfc1b75199c'
 let baseURL ='https://api.openweathermap.org/data/2.5/weather'
  const getUserLocation = ()=>{
@@ -25,26 +26,31 @@ function weatherDisplay(position){
         JSON.stringify(data)
         //  paragraph.textContent=JSON.stringify(data)
 
-        country.textContent=data.sys.country
+        country.textContent=` Country: ${data.sys.country}`
         humidity.textContent=`${data.main.humidity} ${deg}`
-        city.textContent= data.name
+        city.textContent= `City: ${data.name}`
         describe.textContent=data.weather[0].description
         rain.textContent=data.weather[0].main
         temp.textContent= data.main.temp_min
         icony.src=`http://openweathermap.org/img/w/${data.weather[0].icon}.png`
     })
 }
-http://openweathermap.org/img/w/10d.png
 
 
 getUserLocation() 
 
 
-paragraph.textContent=date
+paragraph.textContent=date.toLocaleString('en-GB');
+
 function showWeather(){
     
     
 }
+const night = document.getElementById('mode')
+const container= document.getElementById('container')
+night.addEventListener('click', function(){
+    container.classList.toggle('dark-mode')
+})
 
 
 

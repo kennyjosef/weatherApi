@@ -10,9 +10,9 @@ body{
 }
 .container{
     position: relative;
-    background-color: rgb(6, 6, 50);
+    color: black;
+    background-color: white;
     width: 350px;
-    height: 650px;
     border-radius: 50px;
     margin: auto;
     text-align: center;
@@ -20,21 +20,16 @@ body{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
 }
 .text{
-    position: absolute;
-    top: 90px;
-    left: 90px;
+    padding-top: 20px;
+
     
 }
 .country{
-    position: absolute;
-    left: 30px;
-    top: 140px;
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 287px;
 }
 .country p{
     font-size: 18px;
@@ -43,16 +38,16 @@ body{
     font-size: 25px;
 }
 .icon{
-    margin-top: 140px;
+    margin-top:30px;
 }
 .icon img{
-    /* margin-top: 20px; */
+    margin-top: 5px;
 }
 .icon p{
-    /* padding-top: 20px; */
+    padding-top:5px;
 }
-.degree{
-    /* padding-top: 20px; */
+.degree h2{
+    padding-top: 5px;
 }
 .details{
     margin-top: 40px;
@@ -78,7 +73,7 @@ body{
 
 }
 button{
-    width: 200px;
+    width: 150px;
     border-radius: 10px;
     height: 40px;
     font-size: 18px;
@@ -99,4 +94,17 @@ button{
     border-radius: 10px;
     font-size: 18px;
     padding: 10px;
+}
+.dark-mode {
+    background-color: rgb(6, 6, 50);
+    color: white;
+  }
+
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 100%;
+    }
+    .country, .time{
+        display: block;
+    }
 }
